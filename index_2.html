@@ -68,6 +68,16 @@
 
 .mySlides {display: none}
 body {font-family: "Lato", sans-serif}
+
+
+.fixed-bg {
+    background-image: url("images/top_img_4.jpg");
+    min-height: 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
 
 <body>
@@ -112,9 +122,10 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
     <!-- top view -->
-    <div class="container">
+    <div class="container" style="background-attachment: fixed">
+      <div class="fixed-bg"></div>
       <!-- top image -->
-      <img src="images/top_img_4.jpg" style="width:100%">
+      <!-- <img src="images/top_img_4.jpg"  style="width:100%"> -->
 
       <!-- text -->
       <div class="centered">HI<br/>I AM <font color="lightsalmon">ANURANG</font><br/> <p style="font-size:2vw;">A third year CS major at UCLA<br/>actively looking or a part time job or internship<p></div>
