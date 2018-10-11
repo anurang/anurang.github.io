@@ -67,44 +67,29 @@
   background-color: black;
 }
 
-.my_test{
+.intro{
   height:20em;
   
 }
 @media (max-width: 900px) {
-    .my_test {
+    .intro {
       height:12em;
     }
 
 }
 @media (max-width: 600px) {
-    .my_test {
+    .intro {
       height:8em;
     }
 }
-.parallax {
-    /* The image used */
-    background-image: url('img_parallax.jpg');
 
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100px 50px;
-
-}
-
-.mySlides {display: none}
 body {
 font-family: "Lato", sans-serif;
 background-image: url('images/top_img_4.jpg');
 background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% ;
+  background-position-y: 30px;
 }
 
 </style>
@@ -148,7 +133,7 @@ background-repeat: no-repeat;
   </div>
 
   <!-- Page content -->
-  <div class="w3-content my_test" style="max-width:100%;margin-top:30%">
+  <div class="w3-content intro" style="max-width:100%;margin-top:30%">
 
     <!-- top view -->
     <div class="container">
