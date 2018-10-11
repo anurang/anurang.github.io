@@ -32,10 +32,10 @@
 
 /* Centered text */
 .centered {
-  font-family: "Verdana-Bold";
+  font-family: "Times New Roman";
       text-shadow:0px 0px 10px grey;
 
-  font-size: 4vw;
+  font-size: 6vw;
   color: white;
 
 
@@ -44,6 +44,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 
 .container .btn {
@@ -66,8 +67,46 @@
   background-color: black;
 }
 
+.my_test{
+  height:20em;
+  
+}
+@media (max-width: 900px) {
+    .my_test {
+      height:12em;
+    }
+
+}
+@media (max-width: 600px) {
+    .my_test {
+      height:8em;
+    }
+}
+.parallax {
+    /* The image used */
+    background-image: url('img_parallax.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100px 50px;
+
+}
+
 .mySlides {display: none}
-body {font-family: "Lato", sans-serif}
+body {
+font-family: "Lato", sans-serif;
+background-image: url('images/top_img_4.jpg');
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% ;
+}
+
 </style>
 
 <body>
@@ -109,15 +148,15 @@ body {font-family: "Lato", sans-serif}
   </div>
 
   <!-- Page content -->
-  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="w3-content my_test" style="max-width:100%;margin-top:30%">
 
     <!-- top view -->
     <div class="container">
       <!-- top image -->
-      <img src="images/top_img_4.jpg" style="width:100%">
+      <!-- <img src="images/top_img_4.jpg" style="width:100%"> -->
 
       <!-- text -->
-      <div class="centered">HI<br/>I AM <font color="lightsalmon">ANURANG</font><br/> <p style="font-size:2vw;">A third year CS major at UCLA<br/>actively looking for a part time job or internship<p></div>
+      <div class="centered">HI<br/>I AM <font color="brown">ANURANG</font><br/> <p style="font-size:2vw;">A third year CS major at UCLA<br/>actively looking for a part time job or internship<p></div>
 
         <!-- hire me button -->
         <!-- <a href="#contact"><button class="btn">Contact me</i></button></a> -->
@@ -127,16 +166,31 @@ body {font-family: "Lato", sans-serif}
     </div>
 
 
+
 <!-- landing page -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="landing">
+  <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:100%;background-color:whitesmoke" id="landing">
       <h2 class="w3-wide">WELCOME TO MY WEBSITE</h2>
       <p class="w3-opacity"><i>I am currently making some changes, which will be up soon...</i></p>
     </div>
+    <!-- personal projects section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:100%;background-color:white" id="PERSONAL_PROJECTS">
+      
+      
+      <div style="margin: 0% 20%;">
+      <h2 class="w3-wide">PROJECTS</h2>
+      <p class="w3-opacity"><i>I am revamping the projects section, it will be up soon...</i></p>
+      <div style="margin: 0% 20%;">
+    
+    </div>
+    
     <!-- The about Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
-      <h2 class="w3-wide">ABOUT ME</h2>
-      <p class="w3-opacity"><i>My journey.</i></p>
-      <p class="w3-justify">Born and brought up in Mumbai India, I moved to UCLA in fall 2016 as an undeclared engineering major. I took my first CS class fall quarter freshmen year and immediately fell in love with CS. I realized that CS opens up endless possibilities and gives you complete freedom to weave whatever you want with a few simple keystrokes and some clever thinking. 
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:100%;background-color:white" id="about">
+      <div style="margin: 0% 20%;">
+
+
+      <h2 class="w3-wide" >ABOUT ME</h2>
+      <p class="w3-opacity" ><i>My journey.</i></p>
+      <p class="w3-justify" >Born and brought up in Mumbai India, I moved to UCLA in fall 2016 as an undeclared engineering major. I took my first CS class fall quarter freshmen year and immediately fell in love with CS. I realized that CS opens up endless possibilities and gives you complete freedom to weave whatever you want with a few simple keystrokes and some clever thinking. 
         What started as an interest has turned into a passion. I love facing challenging problems and coming up with clever solutions. The dopamine rush that I get from solving a difficult problem cannot be paralleled with any form of temporary happiness. 
         Over the past few years I have attended hackathons, conferences and clubs and have grown to love the CS community. I love the collaborative and entrepreneurial spirit of the community and am inspired by the amount of hard working and focused people I meet.
       </p>
@@ -156,13 +210,7 @@ body {font-family: "Lato", sans-serif}
       <p class="w3-justify">
         If I take up something I do not feel satisfied until I do it perfectly. If I am working on a project, I do not feel satisfied until I have tested it a million times in varied situations. I try to make my code as elegant and readable as possible and try to comment it out as I know that good organization is essential when it comes to refactoring and debugging.
       </p>
-
-        <!-- personal projects section -->
-      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:2000px" id="PERSONAL_PROJECTS">
-        <h2 class="w3-wide">PROJECTS</h2>
-      <p class="w3-opacity"><i>I am revamping the projects section, it will be up soon...</i></p>
     </div>
-
       <!-- End Page Content -->
     </div>
   </div>
@@ -199,21 +247,10 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 </footer>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-   x[i].style.display = "none";  
- }
- myIndex++;
- if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-setTimeout(carousel, 4000);    
-}
+
+
+
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
