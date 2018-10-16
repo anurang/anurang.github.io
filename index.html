@@ -12,14 +12,25 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns:  repeat(auto-fill, minmax(235px, 1fr));
-
+  grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
   padding: 10px;
 }
+
 .grid-item {
   padding: 10px;
   /*font-size: 3px;*/
   text-align: center;
+
+}
+
+/* remove underlines from links */
+.noDecoration, a:link, a:visited {
+    text-decoration: none;
+}
+
+.card-heading{
+  font-weight: bold;
+  font-size: 1.5vw; 
 }
 
 /* Container holding the image and the text */
@@ -71,17 +82,39 @@
   height:20em;
   
 }
+.grid-card{
+  height: 40em;
+}
+
 @media (max-width: 900px) {
+  .card-heading{
+  font-size: 3vw; 
+  }
+  .grid-card{
+  height: 50em;
+  }
     .intro {
       height:12em;
     }
 
 }
+
+
+
 @media (max-width: 600px) {
+  .grid-card{
+  height: 40em;
+}
+  .card-heading{
+  font-size: 3.5vw; 
+  }
     .intro {
       height:8em;
     }
 }
+
+
+
 
 body {
 font-family: "Lato", sans-serif;
@@ -158,15 +191,75 @@ background-repeat: no-repeat;
       <p class="w3-opacity"><i>I am currently making some changes, which will be up soon...</i></p>
     </div>
     <!-- personal projects section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:100%;background-color:white" id="PERSONAL_PROJECTS">
+    <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:100%;background-color:white" id="PERSONAL_PROJECTS">
       
       
       <div style="margin: 0% 10%;">
-      <h2 class="w3-wide">PROJECTS</h2>
-      <p class="w3-opacity"><i>I am revamping the projects section, it will be up soon...</i></p>
-    
+            <!-- personal projects section -->
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:2000px" id="PERSONAL_PROJECTS">
+              <h2 class="w3-wide">PERSONAL PROJECTS AND HACKATHONS</h2>
+              <p class="w3-opacity"><i>Here is a list of my personal projects</i></p>
+              <!-- using "grid-container" class to put stuff in a grid -->
+              <div class="grid-container">
+                <!-- can conviniently add a grid item like below -->
+                <div class="grid-item" > <a href="projects/project.html">
+                  <div class="w3-card grid-card" style="width:100%">
+                  <img src="images/studysmart.png" alt="studysmart" style="width:80% ; padding:10px">
+                  <div class="w3-container w3-center">
+                    <p class="card-heading">Product manager at StudySmart</p>
+                    <p>StudySmart is an all in one solution for UCLA students which will enable them to Book study spacces, find clubs, form study groups, get acccess to student resources and much more.</p>
+                  </div>
+                </div> </a> </div>
+                <!-- end of grid item -->
+      
+                <div class="grid-item"> <a href="projects/project.html">
+                  <div class="w3-card grid-card" style="width:100%">
+                  <img src="images/coreml.png" alt="food nutrition app" style="width:80% ; padding:10px">
+                  <div class="w3-container w3-center">
+                    <p class="card-heading">nutrition app using coreml</p>
+                    <p>IOS app that detects any food item placed in the viewfinder of the phone and displays nutritional information about it.</p>
+                  </div>
+                </div> </a> </div>
+      
+                <div class="grid-item"> <a href="projects/project.html">
+                  <div class="w3-card grid-card" style="width:100%">
+                  <img src="images/raffle_master.png" alt="test" style="width:80%; padding:10px">
+                  <div class="w3-container w3-center">
+                    <p class="card-heading">Raffle master</p><br/>
+                    <p>IOS app that lets event organisers create electronic raffles and deploy them via a QR code and the app.</p>
+                    <p>Has an intuitive frontend for enrolling in raffels.</p>
+                  </div>
+                </div>   </a> </div>  
+
+                <div class="grid-item"> <a href="projects/project.html">
+                  <div class="w3-card grid-card" style="width:100%">
+                  <img src="images/fear_me.jpg" alt="test" style="width:80%; padding:10px">
+                  <div class="w3-container w3-center">
+                    <p class="card-heading">Fear me</p><br/>
+                    <p>Unity powered horror game that changes its gameplay based on the fear/anxiety level of the player.</p>
+                    <p>Uses the Muse Headband along with custom trained neural netwoeks to detect fear.</p>
+
+                  </div>
+                </div>   </a> </div> 
+
+      
+        
+      
+              </div>
+            </div>   
     </div>
-    
+  <!-- UCLA projects section -->
+  <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:100%;background-color:white" id="UCLA_PROJECTS">
+
+
+    <div style="margin: 0% 10%;">
+          <!-- personal projects section -->
+          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:2000px" id="UCLA_PROJECTS">
+            <h2 class="w3-wide">UCLA PROJECTS</h2>
+
+          </div>
+    </div>
+          
     <!-- The about Section -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:100%;background-color:white" id="about">
       <div style="margin: 0% 10%;">
@@ -197,7 +290,18 @@ background-repeat: no-repeat;
     </div>
       <!-- End Page Content -->
     </div>
+  
+    <!-- The contact Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:100%;background-color:white" id="contact">
+      <div style="margin: 0% 10%;">
+      <h2 class="w3-wide" >CONTACT</h2>
+      <p class="w3-centered"> Email: anurang2019@gmail.com</p>
+      <p class="w3-centered"> Phone: 4245357265</p>
+      </div>
+
+
   </div>
+
   <!-- Add Google Maps -->
   <div id="googleMap" style="height:400px;" class="w3-grayscale-max"></div>
   <script>
